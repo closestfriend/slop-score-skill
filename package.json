@@ -1,0 +1,15 @@
+{
+  "name": "slop-score-skill",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sam Paech's eqbench Slop Score heuristic as a standalone CLI for a Claude skill.",
+  "bin": { "slop-score": "scripts/slop-score.mjs" },
+  "scripts": {
+    "test": "node --test",
+    "build-norm": "node scripts/build-normalization.mjs"
+  },
+  "optionalDependencies": {
+    "wink-pos-tagger": "^2.2.2"
+  }
+}
