@@ -1,11 +1,22 @@
-# slop-score (Claude skill)
+# slop-score
 
-A standalone, shareable Claude skill that runs Sam Paech's eqbench **Slop Score**
-heuristic against a piece of writing and flags the specific offending phrases.
+> *"This is not AI-detection, but slop detection."* — scores **25.32/100 [SLOP]**.
+> The tagline fails its own test.
 
-Faithful port of https://eqbench.com/slop-score.html — composite of slop words
-(60%), "not X, but Y" contrast patterns (25%), and slop trigrams (15%),
-min-max normalized against the model leaderboard, scaled 0–100. `> 25 = SLOP`.
+AI-detection asks who wrote a sentence; it's unreliable, adversarial, and
+increasingly beside the point. Slop detection asks the question that actually
+matters — does the writing read like slop? — and that one can be counted, with
+receipts. No authorship verdict, no vibes: just the exact overused words,
+trigrams, and "not X, but Y" constructions, tallied and scored.
+
+![slop-score demo](assets/demo.svg)
+
+An agent skill (Claude Code, Cursor, Codex, or any `SKILL.md`-compatible agent)
+that runs Sam Paech's eqbench **Slop Score** heuristic against a piece of
+writing. Faithful port of https://eqbench.com/slop-score.html — composite of
+slop words (60%), "not X, but Y" contrast patterns (25%), and slop trigrams
+(15%), min-max normalized against the model leaderboard, scaled 0–100.
+`> 25 = SLOP`. It **flags, never rewrites** — you stay the editor.
 
 ## Install
 
