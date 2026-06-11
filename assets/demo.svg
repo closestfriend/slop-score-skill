@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="478" viewBox="0 0 760 478" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5">
+  <rect width="760" height="478" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <circle cx="22" cy="21" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="21" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="21" r="6" fill="#28c840"/>
+  <text x="380" y="25" fill="#8b949e" text-anchor="middle" font-size="12">slop-score</text>
+
+  <text x="24" y="62" fill="#8b949e">$ <tspan fill="#e6edf3">slop-score --file draft.md</tspan></text>
+
+  <text x="24" y="96" fill="#e6edf3">=== Slop Score: <tspan fill="#ff7b72" font-weight="bold">85.32/100</tspan>  [<tspan fill="#ff7b72" font-weight="bold">SLOP</tspan>] ===</text>
+  <text x="24" y="120" fill="#8b949e">  Slop words   60%  raw 109.09/1k  -&gt; <tspan fill="#ff7b72">100% norm</tspan></text>
+  <text x="24" y="140" fill="#8b949e">  Not-x-but-y  25%  raw   3.14/1k  -&gt; <tspan fill="#ff7b72">100% norm</tspan></text>
+  <text x="24" y="160" fill="#8b949e">  Slop trigrams 15%  raw   0.00/1k  -&gt; <tspan fill="#7ee787">2% norm</tspan></text>
+
+  <text x="24" y="194" fill="#e6edf3">Flagged slop words (6 hits):</text>
+  <text x="24" y="216" fill="#ffa657">  absently×1, whisper×1, tapestry×1, unwavering×1, unspoken×1, ticked×1</text>
+
+  <text x="24" y="248" fill="#e6edf3">Not-x-but-y sentences (1):</text>
+  <text x="24" y="270" fill="#ffa657">  - It was not the silence that unsettled her, but the weight of what</text>
+  <text x="24" y="288" fill="#ffa657">    remained unspoken.</text>
+
+  <text x="24" y="320" fill="#8b949e">Stats: 55 words, 4 sentences, 74.5% lexical diversity</text>
+
+  <text x="24" y="362" fill="#8b949e">$ <tspan fill="#e6edf3">slop-score --text "This is not AI-detection, but slop detection."</tspan></text>
+  <text x="24" y="392" fill="#e6edf3">=== Slop Score: <tspan fill="#ff7b72" font-weight="bold">25.32/100</tspan>  [<tspan fill="#ff7b72" font-weight="bold">SLOP</tspan>] ===</text>
+  <text x="24" y="416" fill="#ffa657">  - This is not AI-detection, but slop detection.</text>
+  <text x="24" y="448" fill="#8b949e"><tspan font-style="italic"># yes, the tagline fails its own test</tspan></text>
+</svg>
