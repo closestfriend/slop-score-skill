@@ -56,6 +56,8 @@ node scripts/build-normalization.mjs path/to/leaderboard_results.json
 node --test
 ```
 
-## Credit
+## Credit & License
 
-Heuristic and slop lists by Sam Paech (eqbench.com / slop-forensics).
+MIT — see [LICENSE](LICENSE). Heuristic and slop lists by Sam Paech
+([eqbench.com](https://eqbench.com/slop-score.html) /
+[slop-forensics](https://github.com/sam-paech/slop-forensics), MIT).
