@@ -2,6 +2,7 @@
   "name": "slop-score-skill",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "Sam Paech's eqbench Slop Score heuristic as a standalone CLI for a Claude skill.",
   "bin": { "slop-score": "scripts/slop-score.mjs" },
