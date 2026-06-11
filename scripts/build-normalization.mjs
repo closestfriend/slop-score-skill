@@ -6,10 +6,14 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DEFAULT_LEADERBOARD = '/Users/hnsk/Projects/node/slop-score/data/leaderboard_results.json';
 const outPath = join(__dirname, '..', 'data', 'normalization.json');
 
-const srcPath = process.argv[2] || DEFAULT_LEADERBOARD;
+const srcPath = process.argv[2];
+if (!srcPath) {
+  console.error('Usage: node scripts/build-normalization.mjs <path/to/leaderboard_results.json>');
+  console.error('Get leaderboard data from https://eqbench.com (slop-score leaderboard).');
+  process.exit(2);
+}
 const json = JSON.parse(readFileSync(srcPath, 'utf8'));
 const rows = json.results || json;
 

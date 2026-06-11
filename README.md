@@ -7,6 +7,20 @@ Faithful port of https://eqbench.com/slop-score.html — composite of slop words
 (60%), "not X, but Y" contrast patterns (25%), and slop trigrams (15%),
 min-max normalized against the model leaderboard, scaled 0–100. `> 25 = SLOP`.
 
+## Install
+
+```bash
+npx skills add closestfriend/slop-score-skill     # Claude Code, Cursor, Codex, etc.
+```
+
+Or clone straight into your agent's skills directory:
+
+```bash
+git clone https://github.com/closestfriend/slop-score-skill ~/.claude/skills/slop-score
+```
+
+Zero-install scoring out of the box — Stage 2 is the only thing that needs `npm install` (see below).
+
 ## Usage
 
 ```bash
@@ -33,7 +47,7 @@ The script auto-detects it; if absent, it scores without Stage 2 and says so.
 If the upstream leaderboard changes:
 
 ```bash
-node scripts/build-normalization.mjs [path/to/leaderboard_results.json]
+node scripts/build-normalization.mjs path/to/leaderboard_results.json
 ```
 
 ## Tests

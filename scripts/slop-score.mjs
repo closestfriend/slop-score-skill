@@ -118,7 +118,7 @@ function printHuman(r) {
   else L.push('  none');
   L.push('');
   L.push(`Stats: ${r.stats.words} words, ${r.stats.sentences} sentences, ${r.stats.lexical_diversity}% lexical diversity`);
-  if (!r.stage2_enabled) L.push(`\n(Stage-2 POS contrast patterns disabled. Enable: cd ~/.claude/skills/slop-score && npm install)`);
+  if (!r.stage2_enabled) L.push(`\n(Stage-2 POS contrast patterns disabled. Enable: cd ${join(__dirname, '..')} && npm install)`);
   process.stdout.write(L.join('\n') + '\n');
 }
 

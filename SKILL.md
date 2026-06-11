@@ -17,17 +17,17 @@ Faithful standalone port of https://eqbench.com/slop-score.html. Reports the com
    - File path given → use `--file <path>`.
    - Inline/pasted text → write it to a temp file and use `--file`, or pass `--text "<...>"` for short snippets.
    - Nothing given → ask the user for a file path or the text.
-2. **Run the engine** (paths are absolute; the script self-resolves its data):
+2. **Run the engine** from this skill's base directory (provided when the skill is invoked; the script self-resolves its data):
    ```bash
-   node ~/.claude/skills/slop-score/scripts/slop-score.mjs --file "<PATH>" --json
+   node <skill-base-dir>/scripts/slop-score.mjs --file "<PATH>" --json
    ```
 3. **Parse the JSON** and present three sections:
    - **Headline** — `slop_score`/100, verdict, and the three weighted sub-scores (`components`).
    - **Receipts** — `top_words`, `top_trigrams` (with counts), and `contrast_matches` (the actual sentences).
    - **Flag list** — rank the receipts by contribution; state which phrases drove the score. Do NOT author rewrites or tell the user to delete anything unless they ask.
-4. If `stage2_enabled` is `false`, mention once: Stage-2 POS contrast patterns are off; enable with `cd ~/.claude/skills/slop-score && npm install`.
+4. If `stage2_enabled` is `false`, mention once: Stage-2 POS contrast patterns are off; enable with `cd <skill-base-dir> && npm install`.
 
 ## Boundaries
 
-- Do not invoke the `literary-critic-philosopher` agent or add philosophical/authorship interpretation. This skill is mechanical.
+- Do not invoke literary-critic agents/personas or add philosophical/authorship interpretation. This skill is mechanical.
 - If the user asks for rewrites after seeing flags, that's a separate request they can make to you directly.
