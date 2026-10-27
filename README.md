@@ -1,11 +1,11 @@
 # slop-score
 
-> *"This is not AI-detection, but slop detection."* — scores **25.32/100 [SLOP]**.
+> *"This is not AI-detection, but slop detection."*: scores **25.32/100 [SLOP]**.
 > The tagline fails its own test.
 
 AI-detection asks who wrote a sentence; it's unreliable, adversarial, and
 increasingly beside the point. Slop detection asks the question that actually
-matters — does the writing read like slop? — and that one can be counted, with
+matters: does the writing read like slop?: and that one can be counted, with
 receipts. No authorship verdict, no vibes: just the exact overused words,
 trigrams, and "not X, but Y" constructions, tallied and scored.
 
@@ -13,10 +13,10 @@ trigrams, and "not X, but Y" constructions, tallied and scored.
 
 An agent skill (Claude Code, Cursor, Codex, or any `SKILL.md`-compatible agent)
 that runs Sam Paech's eqbench **Slop Score** heuristic against a piece of
-writing. Faithful port of https://eqbench.com/slop-score.html — composite of
+writing. Faithful port of https://eqbench.com/slop-score.html: composite of
 slop words (60%), "not X, but Y" contrast patterns (25%), and slop trigrams
 (15%), min-max normalized against the model leaderboard, scaled 0–100.
-`> 25 = SLOP`. It **flags, never rewrites** — you stay the editor.
+`> 25 = SLOP`. It **flags, never rewrites**: you stay the editor.
 
 ## Install
 
@@ -30,7 +30,7 @@ Or clone straight into your agent's skills directory:
 git clone https://github.com/closestfriend/slop-score-skill ~/.claude/skills/slop-score
 ```
 
-Zero-install scoring out of the box — Stage 2 is the only thing that needs `npm install` (see below).
+Zero-install scoring out of the box: Stage 2 is the only thing that needs `npm install` (see below).
 
 ## Usage
 
@@ -69,6 +69,6 @@ node --test
 
 ## Credit & License
 
-MIT — see [LICENSE](LICENSE). Heuristic and slop lists by Sam Paech
+MIT: see [LICENSE](LICENSE). Heuristic and slop lists by Sam Paech
 ([eqbench.com](https://eqbench.com/slop-score.html) /
 [slop-forensics](https://github.com/sam-paech/slop-forensics), MIT).
